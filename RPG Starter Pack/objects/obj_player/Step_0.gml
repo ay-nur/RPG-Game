@@ -21,7 +21,13 @@ else {
 
 if (keyboard_check_pressed((vk_space)))
 {
-    var _inst = instance_create_depth(x, y, depth, obj_attack);
-    _inst.image_angle = facing;
-    _inst.damage *= damage;
+    if (not attacking)
+    {
+        var _inst = instance_create_depth(x, y, depth, obj_attack);
+        _inst.image_angle = facing;
+        _inst.damage *= damage;
+        alarm[2] = 30;
+        attacking = true;
+    }
+    
 }
