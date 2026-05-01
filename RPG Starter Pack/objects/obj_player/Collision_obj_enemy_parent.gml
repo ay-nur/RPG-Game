@@ -6,6 +6,7 @@ if (alarm[0] < 0)
     
     if (hp <= 0)
     {
+        audio_play_sound(snd_lose, 0, false);
         room_restart();
     }
 }

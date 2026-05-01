@@ -21,6 +21,7 @@ else {
 
 if (keyboard_check_pressed((vk_space)))
 {
+    audio_play_sound(snd_sword_slash, 0, false);
     if (not attacking)
     {
         var _inst = instance_create_depth(x, y, depth, obj_attack);

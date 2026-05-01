@@ -23,6 +23,8 @@ function add_xp(_xp_to_add)
         xp -= xp_require;
         xp_require *= 1.4;
         
+        audio_play_sound(snd_level_up, 0 , false);
+        
         hp_total += 5;
         hp = hp_total;
         damage += 0.8;

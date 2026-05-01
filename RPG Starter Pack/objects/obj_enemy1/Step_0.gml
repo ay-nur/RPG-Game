@@ -12,6 +12,6 @@ move_and_collide(_hor * move_speed, _ver * move_speed, [tilemap, obj_enemy_paren
 if (hp <= 0)
 {
     instance_destroy();
-    
+    audio_play_sound(snd_enemy_death, 0, false);
     obj_player.add_xp(xp_value);
 }
